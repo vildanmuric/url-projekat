@@ -80,12 +80,3 @@ fetch(apiUrl)
 
 }
 
-if (typeof(Storage)!=='undefined'){
-  if (localStorage.pageState) {
-    document.getElementById('linkovi') = localStorage.pageState;
-  }
-}
-
-window.addEventListener('unload', ()=>{
-  localStorage.pageState = document.getElementById('linkovi');
-})
