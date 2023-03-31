@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin:0;
+    text-align: center;
+}
+
+.hero-bg {
+    background-color: #9bb3dc;
+    color:white;
+    padding-bottom: 2.4em;
+}
+
+.hero-bg a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: .5em;
+}
+
+form input {
+    margin: 0 10em 1em; 
+}
+
+.form-container{
+    background-color: white;
+    margin: 0 25em;
+    color: #0460FB;
+    font-weight:bold;
+    font-size:1.3rem;
+    border-radius: 1.5em;
+}
+
+input[type=text] {
+    border: 1px solid #707070;
+    border-radius: .5em;
+    padding: .4em 0;
+    
+}
+
+input[type=button] {
+    background-color: #0460FB;
+    color:white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    border: 2.5px solid #2a5db7;
+    border-radius: .6em;
+    padding: .4em 0;
+}
+
+input[type=button]:hover {
+    background-color: #23509c;
+}
+
+.paragraf{
+    color:#0460FB;
+}
+
+
+.styled-button:hover{
+    background-color:#2a5db7 !important;
+}
+
+.styled-button2:hover{
+    background-color:#7b8dac !important;
+}
+
+.copied-text{
+    color:white !important;
+    background-color:#9bb3dc;
+    margin: 0 39em;
+    padding: .6em 0;
+    border-radius: 6rem;
+}
+
+.animated{
+    animation-name: fade-in-out;
+    animation-duration: 2s;
+}
+
+@keyframes fade-in-out{
+    0% {opacity:0;}
+    20%{opacity:1;}
+    80%{opacity:1;}
+    100%{opacity:0;}
+}
