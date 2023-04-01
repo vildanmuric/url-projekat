@@ -76,7 +76,50 @@ fetch(apiUrl)
   copiedText.addEventListener('animationend', ()=>{
     document.body.removeChild(copiedText);
   })
+
+  window.addEventListener('unload', ()=>{
+    sessionStorage.pageState = document.getElementById('paragraf').innerHTML;
+  });
   
+}
+
+if (typeof(Storage) !== 'undefined'){
+  if (sessionStorage.pageState){
+    const storedContent = document.createElement('div');
+    storedContent.innerHTML = sessionStorage.pageState;
+    document.getElementById('paragraf').appendChild(storedContent);
+  }  
+
+  document.querySelectorAll('.styled-button').forEach((button) =>{
+
+    const node = button.previousSibling;
+    button.addEventListener('click', ()=>{
+      const range = document.createRange();
+      range.selectNode(node);
+      window.getSelection().removeAllRanges()
+      window.getSelection().addRange(range)
+      document.execCommand('copy')
+      window.getSelection().removeAllRanges()
+      document.body.appendChild(copiedText);
+      copiedText.classList.add('animated');
+    });
+
+
+  });
+
+  document.querySelectorAll('.styled-button2').forEach((button) => {
+    const para = button.parentNode;
+    button.addEventListener('click', ()=>{
+      para.remove();
+    });
+  });
+
+  copiedText.addEventListener('animationend', ()=>{
+    document.body.removeChild(copiedText);
+  });
 
 }
+
+
+
 

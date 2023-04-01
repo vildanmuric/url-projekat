@@ -7,7 +7,7 @@ body {
 }
 
 .hero-bg {
-    background-color: #9bb3dc;
+    background-color: #4984e9;
     color:white;
     padding-bottom: 2.4em;
 }
@@ -60,6 +60,7 @@ input[type=button] {
 
 input[type=button]:hover {
     background-color: #23509c;
+    cursor:pointer;
 }
 
 .paragraf{
